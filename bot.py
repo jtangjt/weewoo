@@ -1,4 +1,6 @@
 from twython import Twython, TwythonStreamer
+from pcpolice import siren
+
 from auth import (
     consumer_key,
     consumer_secret,
@@ -11,7 +13,9 @@ class MyStreamer(TwythonStreamer):
         if 'text' in data:
             username = data['user']['screen_name']
             tweet = data['text']
-            print("@{}: {}".format(username, tweet))
+            if(username == 'realDonaldTurmp'):
+                siren()
+                print("@{}: {}".format(username, tweet))
 
 stream = MyStreamer(
     consumer_key,
