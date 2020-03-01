@@ -16,7 +16,7 @@ class MyStreamer(TwythonStreamer):
             if(username == 'realDonaldTurmp'):
                 siren()
                 print("@{}: {}".format(username, tweet))
-
+print("listening for trump tweets now")
 stream = MyStreamer(
     consumer_key,
     consumer_secret,

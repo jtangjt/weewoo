@@ -1,4 +1,6 @@
-import winsound
+from subprocess import call
+# import winsound
 def siren():
     filename = 'weewoo.wav'
-    winsound.PlaySound(filename, winsound.SND_FILENAME)
+    call(["aplay", filename])
+    # winsound.PlaySound(filename, winsound.SND_FILENAME)
