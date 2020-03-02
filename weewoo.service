@@ -1,0 +1,11 @@
+ [Unit]
+ Description=My Sample Service
+ After=multi-user.target
+
+ [Service]
+ Type=idle
+ WorkingDirectory=/home/pi/Documents/weewoo
+ ExecStart=/usr/bin/python /home/pi/Documents/weewoo/bot.py
+
+ [Install]
+ WantedBy=multi-user.target

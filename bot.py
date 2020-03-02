@@ -16,11 +16,19 @@ class MyStreamer(TwythonStreamer):
             if(username == 'realDonaldTurmp'):
                 siren()
                 print("@{}: {}".format(username, tweet))
+
+
 print("listening for trump tweets now")
+
 stream = MyStreamer(
     consumer_key,
     consumer_secret,
     access_token,
     access_token_secret
 )
-stream.statuses.filter(follow='25073877') #This is @realDonaldTrump
+while True:
+    try:
+        stream.statuses.filter(follow='25073877') #This is @realDonaldTrump
+    except  ChunkedEncodingError:
+        print("error, but its handled")
+        continue
