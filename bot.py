@@ -29,6 +29,6 @@ stream = MyStreamer(
 while True:
     try:
         stream.statuses.filter(follow='25073877') #This is @realDonaldTrump
-    except  ChunkedEncodingError:
+    except:
         print("error, but its handled")
         continue
