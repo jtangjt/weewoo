@@ -5,7 +5,7 @@
  [Service]
  Type=idle
  WorkingDirectory=/home/pi/Documents/weewoo
- ExecStart=/usr/bin/python /home/pi/Documents/weewoo/bot.py
+ ExecStart=/usr/bin/python3 /home/pi/Documents/weewoo/bot.py
 
  [Install]
  WantedBy=multi-user.target
