@@ -13,7 +13,7 @@ class MyStreamer(TwythonStreamer):
         if 'text' in data:
             username = data['user']['screen_name']
             tweet = data['text']
-            if(username == 'realDonaldTurmp'):
+            if(username == 'realDonaldTrump'):
                 siren()
                 print("@{}: {}".format(username, tweet))
 
